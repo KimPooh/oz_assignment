@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<body>
+    <header>
+        <h1>이력서</h1>
+        <p>HTML 태그를 활용하여 작성한 개인 이력서입니다.</p>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>개인 정보</h2>
+            <img src="./assets/profile-placeholder.svg" alt="프로필 이미지" width="150">
+            <p>안녕하세요. 프론트엔드 개발자를 목표로 HTML, CSS, JavaScript를 학습하고 있습니다.</p>
+
+            <ul>
+                <li>이름: Your Name</li>
+                <li>이메일: your.email@example.com</li>
+                <li>주소: Seoul, South Korea</li>
+                <li>희망 직무: Front-end Developer</li>
+            </ul>
+
+            <p>
+                GitHub Repository:
+                <a href="https://github.com/UnknownUserKR/oz-ai-05/tree/main" target="_blank">
+                    내 Repository 바로가기
+                </a>
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>학력 및 학습 내용</h2>
+            <ul>
+                <li>학력: Your School Name</li>
+                <li>전공 또는 과정: Web Development</li>
+                <li>학습 기술: HTML, CSS, JavaScript, GitHub</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>기술 스택</h2>
+            <ol>
+                <li>HTML 문서 구조 작성</li>
+                <li>CSS 기본 스타일링</li>
+                <li>JavaScript 기초 문법</li>
+                <li>GitHub를 활용한 코드 관리</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>관심 분야</h2>
+            <p>사용자가 보기 편하고 이해하기 쉬운 웹 페이지를 만드는 것에 관심이 있습니다.</p>
+            <ul>
+                <li>반응형 웹 페이지</li>
+                <li>웹 접근성</li>
+                <li>프론트엔드 개발</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>이력 테이블</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>기간</th>
+                        <th>활동</th>
+                        <th>내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026</td>
+                        <td>HTML/CSS 학습</td>
+                        <td>기본 태그, 목록, 표, 폼 작성 연습</td>
+                    </tr>
+                    <tr>
+                        <td>2026</td>
+                        <td>GitHub 사용</td>
+                        <td>과제 파일을 Repository에 업로드하고 관리</td>
+                    </tr>
+                    <tr>
+                        <td>2026</td>
+                        <td>개인 이력서 페이지 제작</td>
+                        <td>HTML 필수 태그를 활용한 resume.html 작성</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>메일 발송 폼</h2>
+            <p>아래 양식은 자기소개서와 연락 정보를 보내기 위한 예시 폼입니다.</p>
+
+            <form>
+                <label for="manager-email">담당자 이메일:</label>
+                <input type="email" id="manager-email" name="manager-email" placeholder="email@example.com">
+                <br><br>
+
+                <label for="company-name">회사 이름:</label>
+                <input type="text" id="company-name" name="company-name" placeholder="Company Name">
+                <br><br>
+
+                <label for="message">메시지:</label>
+                <br>
+                <textarea id="message" name="message" rows="6" cols="50" placeholder="자기소개서 내용을 입력하세요."></textarea>
+                <br><br>
+
+                <button type="submit">이력서 전송하기</button>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Your Name</p>
+    </footer>
+</body>
+</html>
