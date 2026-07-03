@@ -3,14 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=./HTML_CSS/day1/resume.html">
     <title>oz_assignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background: #f4f7fb;
+            color: #1f2933;
+            font-family: Arial, "Noto Sans KR", sans-serif;
+        }
+
+        main {
+            width: min(720px, 100%);
+            padding: 32px;
+            border: 1px solid #d9e2ec;
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        ul {
+            display: grid;
+            gap: 12px;
+            padding: 0;
+            margin: 24px 0 0;
+            list-style: none;
+        }
+
+        a {
+            display: block;
+            padding: 14px 16px;
+            border: 1px solid #d9e2ec;
+            border-radius: 6px;
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        a:hover {
+            background: #edf4ff;
+        }
+    </style>
 </head>
 <body>
-    <h1>oz_assignment</h1>
-    <p>
-        이력서 페이지로 이동합니다.
-        <a href="./HTML_CSS/day1/resume.html">HTML_CSS/day1/resume.html</a>
-    </p>
+    <main>
+        <h1>oz_assignment</h1>
+        <p>HTML/CSS 과제 페이지입니다.</p>
+        <ul>
+            <li><a href="./HTML_CSS/day1/resume.html">Day1 - HTML 이력서</a></li>
+            <li><a href="./HTML_CSS/day2/resume.html">Day2 - HTML/CSS 이력서</a></li>
+        </ul>
+    </main>
 </body>
 </html>

@@ -1,0 +1,6 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="240" height="240" rx="120" fill="#EAF1FF"/>
+    <circle cx="120" cy="92" r="42" fill="#2563EB"/>
+    <path d="M48 202C57 163 83 144 120 144C157 144 183 163 192 202H48Z" fill="#1E40AF"/>
+    <text x="120" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#1F2933">MY CV</text>
+</svg>
