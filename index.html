@@ -21,7 +21,7 @@
         }
 
         main {
-            width: min(720px, 100%);
+            width: min(820px, 100%);
             padding: 32px;
             border: 1px solid #d9e2ec;
             border-radius: 8px;
@@ -32,11 +32,20 @@
             margin-top: 0;
         }
 
+        .assignment-group {
+            margin-top: 26px;
+        }
+
+        .assignment-group h2 {
+            margin: 0 0 12px;
+            font-size: 20px;
+        }
+
         ul {
             display: grid;
             gap: 12px;
             padding: 0;
-            margin: 24px 0 0;
+            margin: 0;
             list-style: none;
         }
 
@@ -58,12 +67,24 @@
 <body>
     <main>
         <h1>oz_assignment</h1>
-        <p>HTML/CSS 과제 페이지입니다.</p>
-        <ul>
-            <li><a href="./HTML_CSS/day1/resume.html">Day1 - HTML 이력서</a></li>
-            <li><a href="./HTML_CSS/day2/resume.html">Day2 - HTML/CSS 이력서</a></li>
-            <li><a href="./HTML_CSS/day3/resume.html">Day3 - Bootstrap 반응형 이력서</a></li>
-        </ul>
+        <p>HTML/CSS와 JavaScript 과제 페이지입니다.</p>
+
+        <section class="assignment-group" aria-labelledby="html-css-title">
+            <h2 id="html-css-title">HTML/CSS</h2>
+            <ul>
+                <li><a href="./HTML_CSS/day1/resume.html">Day1 - HTML 이력서</a></li>
+                <li><a href="./HTML_CSS/day2/resume.html">Day2 - HTML/CSS 이력서</a></li>
+                <li><a href="./HTML_CSS/day3/resume.html">Day3 - Bootstrap 반응형 이력서</a></li>
+            </ul>
+        </section>
+
+        <section class="assignment-group" aria-labelledby="javascript-title">
+            <h2 id="javascript-title">JavaScript</h2>
+            <ul>
+                <li><a href="./JavaScript/day1/index.html">JavaScript Day1 - 콘솔 계산기</a></li>
+                <li><a href="./JavaScript/day1/blog.html">JavaScript Day1 - 자료형과 변수 정리</a></li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>
