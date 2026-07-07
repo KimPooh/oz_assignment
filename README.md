@@ -10,7 +10,12 @@ HTML_CSS/
 │   ├── resume.html
 │   └── assets/
 │       └── profile-placeholder.svg
-└── day2/
+├── day2/
+│   ├── resume.html
+│   ├── resume_style.css
+│   └── assets/
+│       └── profile-placeholder.svg
+└── day3/
     ├── resume.html
     ├── resume_style.css
     └── assets/
@@ -22,3 +27,5 @@ HTML_CSS/
 - `HTML_CSS/day1/resume.html`
 - `HTML_CSS/day2/resume.html`
 - `HTML_CSS/day2/resume_style.css`
+- `HTML_CSS/day3/resume.html`
+- `HTML_CSS/day3/resume_style.css`
