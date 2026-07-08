@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day2 - DOM 조작 정리</title>
+    <link rel="stylesheet" href="./calculator_style.css">
+</head>
+<body class="article-page">
+    <header class="article-header">
+        <div class="article-header-inner">
+            <nav class="top-nav" aria-label="JavaScript Day2 정리 글 메뉴">
+                <a href="../../index.html">과제 목록</a>
+                <a href="./calculator.html">DOM 계산기</a>
+            </nav>
+            <div>
+                <p class="eyebrow">JavaScript Blog</p>
+                <h1>JavaScript DOM 조작법 정리</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="article-main">
+        <section class="content-section">
+            <p class="eyebrow">DOM</p>
+            <h2>DOM(Document Object Model)이란?</h2>
+            <p>
+                DOM은 브라우저가 HTML 문서를 읽어서 만든 객체 구조입니다. HTML의 태그, 속성, 텍스트가
+                각각 객체처럼 표현되기 때문에 JavaScript로 화면의 글자, 스타일, 값, 요소를 읽거나 바꿀 수 있습니다.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <p class="eyebrow">Selector</p>
+            <h2>Selector로 DOM 요소 가져오기</h2>
+            <p>
+                JavaScript는 CSS 선택자와 비슷한 방식으로 DOM 요소를 찾을 수 있습니다. 한 개의 요소가 필요하면
+                <code>querySelector()</code>를 사용하고, 여러 요소가 필요하면 <code>querySelectorAll()</code>을 사용합니다.
+            </p>
+            <div class="code-block">
+                <pre><code>const display = document.querySelector("[data-display]");
+const buttons = document.querySelectorAll(".calc-key");
+
+buttons.forEach((button) => {
+    console.log(button.textContent);
+});</code></pre>
+            </div>
+            <ul>
+                <li><code>document.querySelector("#title")</code>: id가 title인 첫 번째 요소를 가져옵니다.</li>
+                <li><code>document.querySelector(".item")</code>: class가 item인 첫 번째 요소를 가져옵니다.</li>
+                <li><code>document.querySelectorAll("button")</code>: 모든 button 요소를 가져옵니다.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <p class="eyebrow">Event</p>
+            <h2>Event란?</h2>
+            <p>
+                Event는 사용자의 행동이나 브라우저 상태 변화가 발생했다는 신호입니다. 클릭, 키보드 입력, 마우스 이동,
+                페이지 로딩, 폼 제출 같은 동작이 대표적인 이벤트입니다.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <p class="eyebrow">EventListener</p>
+            <h2>EventListener란?</h2>
+            <p>
+                EventListener는 특정 이벤트가 발생했을 때 실행할 함수를 등록하는 방법입니다.
+                예를 들어 계산기 버튼에 클릭 이벤트 리스너를 등록하면 버튼을 누를 때마다 계산 로직을 실행할 수 있습니다.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <p class="eyebrow">Purpose</p>
+            <h2>EventListener를 사용하는 목적과 이유</h2>
+            <p>
+                HTML 구조와 JavaScript 동작을 분리할 수 있고, 같은 요소에 여러 동작을 유연하게 연결할 수 있습니다.
+                사용자의 입력에 맞춰 화면을 즉시 바꾸는 인터랙티브 웹 페이지를 만들 때 꼭 필요합니다.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <p class="eyebrow">Define</p>
+            <h2>EventListener 정의하기</h2>
+            <p>
+                <code>addEventListener()</code>의 첫 번째 인수에는 이벤트 이름을 넣고, 두 번째 인수에는 실행할 함수를 넣습니다.
+            </p>
+            <div class="code-block">
+                <pre><code>const clearButton = document.querySelector("[data-action='clear']");
+
+clearButton.addEventListener("click", () => {
+    console.log("계산기를 초기화합니다.");
+});</code></pre>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <p class="eyebrow">Apply</p>
+            <h2>EventListener 응용</h2>
+            <p>
+                여러 버튼에 같은 이벤트를 연결할 때는 <code>querySelectorAll()</code>과 <code>forEach()</code>를 함께 사용할 수 있습니다.
+                각 버튼의 <code>data-action</code> 값에 따라 다른 함수를 실행하면 계산기처럼 버튼이 많은 화면도 깔끔하게 관리할 수 있습니다.
+            </p>
+            <div class="code-block">
+                <pre><code>const buttons = document.querySelectorAll(".calc-key");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        const action = button.dataset.action;
+        const value = button.dataset.value;
+
+        handleAction(action, value);
+    });
+});</code></pre>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <p class="eyebrow">Web API</p>
+            <h2>Web API의 정의</h2>
+            <p>
+                Web API는 브라우저가 JavaScript에 제공하는 기능 모음입니다. JavaScript 언어 자체에는 없는 화면 조작,
+                이벤트 처리, 시간 제어, 저장소 사용, 서버 통신 같은 기능을 브라우저의 API로 사용할 수 있습니다.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <p class="eyebrow">Examples</p>
+            <h2>Web API의 예시</h2>
+            <ul>
+                <li><strong>DOM API</strong>: <code>querySelector()</code>, <code>createElement()</code>, <code>append()</code>처럼 HTML 요소를 찾고 수정합니다.</li>
+                <li><strong>Event API</strong>: <code>addEventListener()</code>로 클릭, 입력, 제출 같은 이벤트를 처리합니다.</li>
+                <li><strong>Timer API</strong>: <code>setTimeout()</code>, <code>setInterval()</code>로 일정 시간 뒤 또는 반복 실행을 처리합니다.</li>
+                <li><strong>Storage API</strong>: <code>localStorage</code>, <code>sessionStorage</code>로 브라우저에 간단한 데이터를 저장합니다.</li>
+                <li><strong>Fetch API</strong>: <code>fetch()</code>로 서버에 데이터를 요청하거나 응답을 받아옵니다.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

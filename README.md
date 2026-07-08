@@ -22,11 +22,17 @@ HTML/CSS와 JavaScript 과제 제출용 저장소입니다.
 │       └── assets/
 │           └── profile-placeholder.svg
 └── JavaScript/
-    └── day1/
-        ├── index.html
+    ├── day1/
+    │   ├── index.html
+    │   ├── calculator.js
+    │   ├── blog.html
+    │   ├── style.css
+    │   └── README.md
+    └── day2/
+        ├── calculator.html
+        ├── calculator_style.css
         ├── calculator.js
         ├── blog.html
-        ├── style.css
         └── README.md
 ```
 
@@ -40,3 +46,7 @@ HTML/CSS와 JavaScript 과제 제출용 저장소입니다.
 - `JavaScript/day1/index.html`
 - `JavaScript/day1/calculator.js`
 - `JavaScript/day1/blog.html`
+- `JavaScript/day2/calculator.html`
+- `JavaScript/day2/calculator_style.css`
+- `JavaScript/day2/calculator.js`
+- `JavaScript/day2/blog.html`

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Day2 - DOM 계산기</title>
+    <link rel="stylesheet" href="./calculator_style.css">
+    <script src="./calculator.js" defer></script>
+</head>
+<body>
+    <main class="calculator-page">
+        <section class="calculator-shell" aria-labelledby="calculator-title">
+            <header class="app-header">
+                <nav class="top-nav" aria-label="JavaScript Day2 메뉴">
+                    <a href="../../index.html">과제 목록</a>
+                    <a href="./blog.html">DOM 정리 글</a>
+                </nav>
+                <div>
+                    <p class="eyebrow">JavaScript Day2</p>
+                    <h1 id="calculator-title">DOM 계산기</h1>
+                </div>
+            </header>
+
+            <div class="calculator-grid">
+                <section class="calculator" aria-label="계산기">
+                    <div class="display" aria-live="polite">
+                        <p class="expression" data-expression>&nbsp;</p>
+                        <output class="result" data-display>0</output>
+                    </div>
+
+                    <p class="status" data-status aria-live="assertive">&nbsp;</p>
+
+                    <div class="keypad" aria-label="계산기 버튼">
+                        <button class="calc-key utility" type="button" data-action="clear">AC</button>
+                        <button class="calc-key utility" type="button" data-action="delete">DEL</button>
+                        <button class="calc-key utility" type="button" data-action="percent">%</button>
+                        <button class="calc-key operator" type="button" data-action="operator" data-value="/">÷</button>
+
+                        <button class="calc-key" type="button" data-action="number" data-value="7">7</button>
+                        <button class="calc-key" type="button" data-action="number" data-value="8">8</button>
+                        <button class="calc-key" type="button" data-action="number" data-value="9">9</button>
+                        <button class="calc-key operator" type="button" data-action="operator" data-value="*">×</button>
+
+                        <button class="calc-key" type="button" data-action="number" data-value="4">4</button>
+                        <button class="calc-key" type="button" data-action="number" data-value="5">5</button>
+                        <button class="calc-key" type="button" data-action="number" data-value="6">6</button>
+                        <button class="calc-key operator" type="button" data-action="operator" data-value="-">−</button>
+
+                        <button class="calc-key" type="button" data-action="number" data-value="1">1</button>
+                        <button class="calc-key" type="button" data-action="number" data-value="2">2</button>
+                        <button class="calc-key" type="button" data-action="number" data-value="3">3</button>
+                        <button class="calc-key operator" type="button" data-action="operator" data-value="+">+</button>
+
+                        <button class="calc-key utility" type="button" data-action="toggle-sign">±</button>
+                        <button class="calc-key" type="button" data-action="number" data-value="0">0</button>
+                        <button class="calc-key" type="button" data-action="decimal" data-value=".">.</button>
+                        <button class="calc-key equal" type="button" data-action="equals">=</button>
+                    </div>
+                </section>
+
+                <aside class="history-panel" aria-labelledby="history-title">
+                    <div class="panel-heading">
+                        <p class="eyebrow">History</p>
+                        <h2 id="history-title">최근 계산</h2>
+                    </div>
+                    <ol class="history-list" data-history>
+                        <li class="empty-history">아직 계산 내역이 없습니다.</li>
+                    </ol>
+                </aside>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
