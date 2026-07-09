@@ -28,11 +28,16 @@ HTML/CSS와 JavaScript 과제 제출용 저장소입니다.
     │   ├── blog.html
     │   ├── style.css
     │   └── README.md
-    └── day2/
-        ├── calculator.html
-        ├── calculator_style.css
-        ├── calculator.js
-        ├── blog.html
+    ├── day2/
+    │   ├── calculator.html
+    │   ├── calculator_style.css
+    │   ├── calculator.js
+    │   ├── blog.html
+    │   └── README.md
+    └── day3/
+        ├── index.html
+        ├── style.css
+        ├── crypto-tracker.js
         └── README.md
 ```
 
@@ -50,3 +55,6 @@ HTML/CSS와 JavaScript 과제 제출용 저장소입니다.
 - `JavaScript/day2/calculator_style.css`
 - `JavaScript/day2/calculator.js`
 - `JavaScript/day2/blog.html`
+- `JavaScript/day3/index.html`
+- `JavaScript/day3/style.css`
+- `JavaScript/day3/crypto-tracker.js`
